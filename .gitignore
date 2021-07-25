@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+dist*/
+coverage
+npm-debug.log
+yarn-error.log*
+*.log*
+.yarnclean
+jest_0/
+
+.idea/
+.vscode/
+*.iml
