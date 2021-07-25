@@ -1,7 +1,8 @@
 const Slot = require("./Slot");
+const {interval} = require("../../constants");
 
 class Slots extends Array {
-    constructor(startTime = 10, endTime = 18, interval = 0.05) {
+    constructor(startTime = 10, endTime = 18) {
         super();
         this.initialiseSlots(startTime, endTime, interval);
     }

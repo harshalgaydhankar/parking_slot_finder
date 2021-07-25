@@ -1,7 +1,6 @@
 
 class Calender {
-    constructor(interval, startTime, endTime) {
-        this.interval = interval;
+    constructor(startTime, endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
     }
