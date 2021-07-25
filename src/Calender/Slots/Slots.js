@@ -8,13 +8,24 @@ class Slots extends Array {
     }
 
     initialiseSlots(startTime, endTime, interval) {
-        for (let i = startTime; i<endTime; i +=interval ){
-            if(i - parseInt(i) < 0.60) {
-                this.push(new Slot(i));
+        for (let i = startTime; i < endTime; i += interval) {
+            if (i - parseInt(i) < 0.60) {
+                this.push(new Slot(i.toFixed(2)));
             }
         }
     }
 
+    getAvailableSlots(startTime, endTime) {
+        let endIndex = this.findIndex(slot => slot.time == endTime);
+        if(endIndex === -1){
+            return [
+                {
+                    from : startTime,
+                    to: endTime
+                }
+            ]
+        }
+    }
 }
 
 module.exports = Slots;
