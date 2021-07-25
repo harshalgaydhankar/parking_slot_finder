@@ -15,4 +15,8 @@ function getSlotSpan(slots) {
     }
 }
 
-module.exports = {adjustTimeToNextSlotTime, getSlotSpan};
+function isOverlappingSlots(firstSlot, secondSlot){
+    return Math.max(parseFloat(firstSlot.from), parseFloat(secondSlot.from)) < Math.min(parseFloat(firstSlot.to), parseFloat(secondSlot.to));
+}
+
+module.exports = {adjustTimeToNextSlotTime, getSlotSpan, isOverlappingSlots};
