@@ -8,5 +8,16 @@ module.exports = {
     moduleDirectories: [
         'node_modules',
         'testing'
-    ]
+    ],
+    collectCoverage: true,
+    collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx}'],
+    coverageReporters: ['json', 'lcov', 'text-summary'],
+    coverageThreshold: {
+        global: {
+            statements: 90,
+            branches: 90,
+            functions: 90,
+            lines: 90,
+        },
+    },
 };
