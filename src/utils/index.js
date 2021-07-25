@@ -8,4 +8,11 @@ function adjustTimeToNextSlotTime(time) {
     return newTime.toFixed(2);
 }
 
-module.exports = {adjustTimeToNextSlotTime};
+function getSlotSpan(slots) {
+    return {
+        from: slots[0].time,
+        to: adjustTimeToNextSlotTime(slots[slots.length - 1].time)
+    }
+}
+
+module.exports = {adjustTimeToNextSlotTime, getSlotSpan};
